@@ -1,0 +1,29 @@
+{
+  "name": "OrderManV13",
+  "version": "1.7.7",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@keshavsoft/kschema": "^1.18.1",
+    "@keshavsoft/tallyextract": "^1.7.2",
+    "@yao-pkg/pkg": "^6.19.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@keshavsoft/kschema-api-gen": "^1.11.1",
+    "@keshavsoft/kschema-cli-samples": "^1.15.2",
+    "@keshavsoft/kschema-api-check": "^1.12.1",
+    "@keshavsoft/kschema-api-gen-actions": "^1.16.2",
+    "json-crud-ui": "^1.1.2",
+    "tailwind-todo": "^1.3.5"
+  }
+}
