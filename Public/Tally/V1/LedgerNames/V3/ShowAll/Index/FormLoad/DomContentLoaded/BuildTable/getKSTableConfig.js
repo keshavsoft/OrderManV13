@@ -3,7 +3,7 @@ export const getKSTableConfig = async ({ tableName }) => {
     // debugger;
     const configJson = await config.json();
 
-    configJson.tableName = tableName;
+    // configJson.tableName = tableName;
 
     configJson.endPoints.read = `/Api/V4/${tableName}/ShowAll`;
     configJson.endPoints.filter = `/Api/V1/${tableName}/FilterColumns`;
