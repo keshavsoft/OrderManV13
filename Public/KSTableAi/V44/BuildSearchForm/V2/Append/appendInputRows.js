@@ -44,7 +44,8 @@ const appendInputRows = ({
             inServices,
             inConfig,
             inShowButton,
-            inDataStore
+            inDataStore,
+            inUiClassesForEachColumn: localColumn.uiClasses
         });
     });
 };
@@ -66,16 +67,16 @@ const appendInputRow = ({
     inServices,
     inConfig,
     inShowButton,
-    inDataStore
+    inDataStore,
+    inUiClassesForEachColumn
 }) => {
-
     const localRow = createInputRow({
         inCol: inColumn,
         inDefaultRow,
         inInputs,
-        inInputClass: inUiClasses.inputClass,
-        inRowClass: inUiClasses.rowClass,
-        inLabelClass: inUiClasses.labelClass,
+        inInputClass: inUiClassesForEachColumn?.form?.inputClass,
+        inRowClass: inUiClassesForEachColumn?.form?.rowClass,
+        inLabelClass: inUiClassesForEachColumn?.form?.labelClass,
         isDate,
         defaultToday,
         isReadonly,

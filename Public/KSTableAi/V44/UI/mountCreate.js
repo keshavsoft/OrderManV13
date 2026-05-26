@@ -61,7 +61,8 @@ const startFunc = ({
             inConfig,
             inShowButton: false,
             uiClasses: uiClasses.form,
-            inDataStore: dataStore
+            inDataStore: dataStore,
+            showSaveButton: true
         });
 
         containerEl.prepend(searchForm);

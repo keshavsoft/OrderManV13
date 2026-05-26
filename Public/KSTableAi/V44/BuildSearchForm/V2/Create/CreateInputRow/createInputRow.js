@@ -28,7 +28,8 @@ const createInputRow = ({
     inServices,
     inConfig,
     inShowButton = true,
-    inDataStore
+    inDataStore,
+    inUiClassesForEachColumn
 }) => {
     const col = inCol.columnName;
 

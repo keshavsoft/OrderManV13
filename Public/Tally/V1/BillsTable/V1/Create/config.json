@@ -35,30 +35,52 @@
                 "width": "150px"
             },
             "dataListSource": "ledgers.LedgerName",
-            "tableFooterDataListShow": true
+            "tableFooterDataListShow": true,
+            "uiClasses": {
+                "form": {
+                    "rowClass": "flex items-center space-x-4"
+                }
+            }
         },
         {
             "columnName": "LedgerParentName",
             "cellConfig": {
                 "width": "50px"
+            },
+            "uiClasses": {
+                "form": {
+                    "rowClass": "flex items-center space-x-4 w-1/2",
+                    "labelClass": "w-36 text-sm font-medium"
+                }
             }
         },
         {
             "columnName": "GstRegistrationType",
             "cellConfig": {
                 "width": "50px"
+            },
+            "uiClasses": {
+                "form": {
+                    "rowClass": "flex items-center space-x-4 w-1/4",
+                    "labelClass": "w-36 text-sm font-medium"
+                }
             }
         },
         {
             "columnName": "PartyGSTIN",
             "cellConfig": {
                 "width": "50px"
+            },
+            "uiClasses": {
+                "form": {
+                    "rowClass": "flex items-center space-x-4 w-1/2"
+                }
             }
         }
     ],
     "uiClasses": {
         "form": {
-            "formClass": "grid grid-cols-2 gap-x-8 gap-y-4 p-6 verticalForm"
+            "formClass": "grid grid-cols-1 gap-x-8 gap-y-4 p-6 verticalForm"
         }
     }
 }
