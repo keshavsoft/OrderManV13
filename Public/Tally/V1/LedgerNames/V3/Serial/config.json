@@ -1,0 +1,51 @@
+{
+    "containerId": "kSTableContainer",
+    "tableName": "",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "endPoints": {
+        "create": "",
+        "update": "",
+        "delete": "",
+        "read": "",
+        "find": "",
+        "filter": "",
+        "dataLists": {}
+    },
+    "options": {
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ]
+    },
+    "columnsConfig": [
+        {
+            "columnName": "LedgerName",
+            "cellConfig": {
+                "width": "50px"
+            }
+        },
+        {
+            "columnName": "LedgerParentName",
+            "cellConfig": {
+                "width": "50px"
+            }
+        },
+        {
+            "columnName": "GstRegistrationType",
+            "cellConfig": {
+                "width": "50px"
+            }
+        },
+        {
+            "columnName": "PartyGSTIN",
+            "cellConfig": {
+                "width": "50px"
+            }
+        }
+    ]
+}
