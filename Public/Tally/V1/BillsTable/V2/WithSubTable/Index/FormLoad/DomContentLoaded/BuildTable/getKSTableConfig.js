@@ -1,3 +1,5 @@
+import { formSearchParamsFunc } from "./formSearchParamsFunc.js";
+
 const onSuccessFunc = async (res) => {
     const fromReponse = await res.json();
     console.log("fromReponse : ", fromReponse);
@@ -9,10 +11,13 @@ export const getKSTableConfig = async ({ tableName }) => {
     // debugger;
     const configJson = await config.json();
 
+    const pkFromParams = formSearchParamsFunc({ inKeyName: "pk" });
+
     // configJson.tableName = tableName;
 
     configJson.endPoints.read = `/Api/V4/${tableName}/ShowAll`;
     configJson.endPoints.filter = `/Api/V1/${tableName}/FilterColumns`;
+    configJson.endPoints.find = configJson.endPoints.find.replace("{pk}", pkFromParams)
 
     configJson.callbacks.vertical.onSuccess = onSuccessFunc;
     // configJson.endPoints.dataListEndpoints.AccountNames = `/Api/V1/${tableName}/Distinct/AccountName`;

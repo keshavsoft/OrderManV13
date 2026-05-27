@@ -22,7 +22,6 @@ const startFunc = ({
     inConfig,
     inShowFooter = false
 }) => {
-    debugger
 
     // debugger;
     const visibleColumns = dataStore.getVisibleColumns();
@@ -44,6 +43,9 @@ const startFunc = ({
     const showTotalsForSearch = options?.table?.showTotalsForSearch;
     const showBalanceForSearch = options?.table?.showBalanceForSearch;
     const showFooterRows = options?.table?.showFooterRows;
+
+    const findData = dataStore.getFindData();
+    debugger
 
     buildFullUI({
         containerEl: containerEl,

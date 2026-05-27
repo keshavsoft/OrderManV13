@@ -11,7 +11,7 @@
         "update": "",
         "delete": "",
         "read": "",
-        "find": "",
+        "find": "/Api/V4/BillsTable/Find",
         "filter": "",
         "dataLists": {},
         "dataListEndpoints": {
