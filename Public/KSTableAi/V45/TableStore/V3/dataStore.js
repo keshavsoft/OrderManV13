@@ -3,6 +3,7 @@ export const createDataStore = () => {
     let searchConfig = { type: "global", value: "" };
     let findData = {};
     let dataLists = {};
+    let findDataFromParams = {};
 
     return {
         setData: (inData) => { data = inData; },
@@ -41,5 +42,7 @@ export const createDataStore = () => {
         setDataList: (key, inData) => { dataLists[key] = inData; },
         getDataList: (key) => dataLists[key],
         getAllDataLists: () => dataLists,
+        setFindFromParams: (inData) => { findDataFromParams = inData; },
+        getFindFromParams: () => findDataFromParams,
     };
 };

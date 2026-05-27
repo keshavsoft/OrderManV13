@@ -45,7 +45,11 @@ const startFunc = ({
     const showFooterRows = options?.table?.showFooterRows;
 
     const findData = dataStore.getFindData();
-    debugger
+    const findDataFromParams = dataStore.getFindFromParams();
+
+    const isFormDisabled = options.vertical.isFormDisabled;
+    const showSaveButton = options.vertical.showSaveButton;
+    // debugger
 
     buildFullUI({
         containerEl: containerEl,
@@ -80,8 +84,10 @@ const startFunc = ({
             inShowButton: false,
             uiClasses: uiClasses.form,
             inDataStore: dataStore,
-            showSaveButton: true,
-            onSubmit: handleSave
+            showSaveButton: showSaveButton,
+            onSubmit: handleSave,
+            inDefaultRow: findDataFromParams,
+            inIsDisabled: isFormDisabled
         });
 
         containerEl.prepend(searchForm);

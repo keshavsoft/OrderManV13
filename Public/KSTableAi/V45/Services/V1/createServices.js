@@ -3,6 +3,7 @@ import { getDataFromFetch } from "./getData.js";
 import { deleteItem } from "./deleteItem.js";
 import { findItem } from "./findItem.js";
 import filterPost from "./filterPost.js";
+import findFromParams from "./findFromParams.js";
 
 export const createServices = ({ tableName }) => {
     return {
@@ -12,6 +13,7 @@ export const createServices = ({ tableName }) => {
             update: (id, payload) => updateItem({ tableName, id, payload }),
             remove: ({ inEndPoint, id }) => deleteItem({ inEndPoint, id }),
             find: ({ inEndPoint, id }) => findItem({ inEndPoint, id }),
+            findFromParams: ({ inEndPoint }) => findFromParams({ inEndPoint }),
             vertical: {
                 save: async ({ inEndPoint, payload }) => {
                     const res = await fetch(inEndPoint, {

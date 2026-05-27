@@ -11,8 +11,7 @@
         "update": "",
         "delete": "",
         "read": "",
-        "find": "",
-        "findFromParams": "/Api/V4/BillsTable/Find/{pk}",
+        "find": "/Api/V4/BillsTable/Find",
         "filter": "",
         "dataLists": {},
         "dataListEndpoints": {
@@ -27,11 +26,7 @@
             "vertical",
             "table",
             "footer"
-        ],
-        "vertical": {
-            "isFormDisabled": true,
-            "showSaveButton": false
-        }
+        ]
     },
     "columnsConfig": [
         {
@@ -65,45 +60,6 @@
             "isSearch": false
         },
         {
-            "columnName": "LedgerGST",
-            "dataListFillName": "PartyGSTIN",
-            "cellConfig": {
-                "width": "50px"
-            },
-            "uiClasses": {
-                "form": {
-                    "rowClass": "flex items-center space-x-4 w-1/2"
-                }
-            }
-        }
-    ],
-    "columnsConfig1": [
-        {
-            "columnName": "LedgerName",
-            "cellConfig": {
-                "width": "150px"
-            },
-            "dataListSource": "ledgers.LedgerName",
-            "tableFooterDataListShow": true,
-            "uiClasses": {
-                "form": {
-                    "rowClass": "flex items-center space-x-4"
-                }
-            }
-        },
-        {
-            "columnName": "LedgerParentName",
-            "cellConfig": {
-                "width": "50px"
-            },
-            "uiClasses": {
-                "form": {
-                    "rowClass": "flex items-center space-x-4 w-1/2",
-                    "labelClass": "w-36 text-sm font-medium"
-                }
-            }
-        },
-        {
             "columnName": "GstRegistrationType",
             "cellConfig": {
                 "width": "50px"
@@ -116,7 +72,8 @@
             }
         },
         {
-            "columnName": "PartyGSTIN",
+            "columnName": "LedgerGST",
+            "dataListFillName": "PartyGSTIN",
             "cellConfig": {
                 "width": "50px"
             },
@@ -129,7 +86,7 @@
     ],
     "uiClasses": {
         "form": {
-            "formClass": "grid grid-cols-3 gap-x-8 gap-y-4 p-6 verticalForm"
+            "formClass": "grid grid-cols-1 gap-x-8 gap-y-4 p-6 verticalForm"
         }
     },
     "callbacks": {

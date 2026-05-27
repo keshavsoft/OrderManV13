@@ -41,7 +41,7 @@ const loadInitialData = async ({
             });
 
             dataStore.setFindData(dataFromFetch);
-        }
+        };
     };
 
     if (endPoints?.filter) {
@@ -55,6 +55,19 @@ const loadInitialData = async ({
 
             dataStore.setFindData(dataFromFetch);
         }
+    };
+
+    if (endPoints?.findFromParams) {
+        const dataFromFetch = await services.actions.findFromParams({
+            inEndPoint: endPoints.findFromParams
+        });
+        // console.log("dataFromFetch : ", dataFromFetch);
+
+        // if (!Array.isArray(dataFromFetch)) {
+        //     throw new Error("read endpoint must return array");
+        // }
+
+        dataStore.setFindFromParams(dataFromFetch);
     };
 };
 
