@@ -43,7 +43,7 @@
             }
         },
         {
-            "columnName": "LedgerParentName",
+            "columnName": "InvoiceDate",
             "cellConfig": {
                 "width": "50px"
             },
@@ -52,7 +52,12 @@
                     "rowClass": "flex items-center space-x-4 w-1/2",
                     "labelClass": "w-36 text-sm font-medium"
                 }
-            }
+            },
+            "isDate": true,
+            "defaultToday": true,
+            "isReadonly": false,
+            "autoFocus": false,
+            "isSearch": false
         },
         {
             "columnName": "GstRegistrationType",
@@ -67,7 +72,8 @@
             }
         },
         {
-            "columnName": "PartyGSTIN",
+            "columnName": "LedgerGST",
+            "dataListFillName": "PartyGSTIN",
             "cellConfig": {
                 "width": "50px"
             },

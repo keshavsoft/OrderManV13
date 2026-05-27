@@ -8,7 +8,7 @@ import { attachToInputs } from "./attachToInputs.js";
 import { assembleRow } from "./assembleRow.js";
 import createButton from "./createButton.js";
 
-import { createInput } from "./CreateInput/V1/createInput.js";
+import { createInput } from "./CreateInput/V2/createInput.js";
 
 const createInputRow = ({
     inCol,
@@ -32,6 +32,7 @@ const createInputRow = ({
     inUiClassesForEachColumn
 }) => {
     const col = inCol.columnName;
+    const dataListFillName = inCol.dataListFillName;
 
     const row = createRowContainer({ rowClass: inRowClass });
 
@@ -51,7 +52,8 @@ const createInputRow = ({
         isSearch,
         onChangeFunc,
         inDataListSource,
-        inDataStore
+        inDataStore,
+        inDataListFillName: dataListFillName
     });
 
     const button = inShowButton
