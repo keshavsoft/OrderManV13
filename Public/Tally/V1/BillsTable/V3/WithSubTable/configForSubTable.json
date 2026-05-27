@@ -1,0 +1,54 @@
+{
+    "containerId": "kSSubTableContainer",
+    "tableName": "Sub",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "endPoints": {
+        "create": "",
+        "update": "",
+        "delete": "",
+        "read": "/Api/V4/ItemsTable/ShowAll",
+        "find": "",
+        "filter": "",
+        "dataLists": {}
+    },
+    "options": {
+        "firstRow": {
+            "showSearch": false
+        },
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ]
+    },
+    "columnsConfig": [
+        {
+            "columnName": "LedgerName",
+            "cellConfig": {
+                "width": "150px"
+            }
+        },
+        {
+            "columnName": "LedgerParentName",
+            "cellConfig": {
+                "width": "50px"
+            }
+        },
+        {
+            "columnName": "GstRegistrationType",
+            "cellConfig": {
+                "width": "50px"
+            }
+        },
+        {
+            "columnName": "PartyGSTIN",
+            "cellConfig": {
+                "width": "50px"
+            }
+        }
+    ]
+}

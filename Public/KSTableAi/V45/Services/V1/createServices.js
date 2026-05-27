@@ -4,6 +4,7 @@ import { deleteItem } from "./deleteItem.js";
 import { findItem } from "./findItem.js";
 import filterPost from "./filterPost.js";
 import findFromParams from "./findFromParams.js";
+import getDataNoParamsFunc from "./getDataNoParamsFunc.js";
 
 export const createServices = ({ tableName }) => {
     return {
@@ -38,7 +39,8 @@ export const createServices = ({ tableName }) => {
             },
             search: {
                 filter: ({ inEndPoint, payload }) => filterPost({ inEndPoint, payload })
-            }
+            },
+            getDataNoParams: ({ inEndPoint }) => getDataNoParamsFunc({ inEndPoint }),
         },
     };
 };

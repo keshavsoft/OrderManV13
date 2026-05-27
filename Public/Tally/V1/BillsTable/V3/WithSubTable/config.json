@@ -21,7 +21,7 @@
     },
     "options": {
         "firstRow": {
-            "showSearch": true
+            "showSearch": false
         },
         "enabledSections": [
             "vertical",

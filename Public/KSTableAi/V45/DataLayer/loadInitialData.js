@@ -16,7 +16,7 @@ const loadInitialData = async ({
         dataStore.setData(data);
         return;
     }
-
+    // debugger
     // 2. Read API
     if (endPoints?.read) {
         const dataFromFetch = await services.actions.getData({

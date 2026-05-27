@@ -40,7 +40,7 @@ const buildDataLists = ({
     inData,
     inDataListColumns
 }) => {
-    debugger;
+    // debugger;
     const containerEl = inContainerEl;
     const dom = inDom;
 

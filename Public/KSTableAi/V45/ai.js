@@ -189,7 +189,7 @@ class KSAiTable {
     };
 
     async initCreate() {
-        this.setupServices();
+        this.setupServices();   
 
         await loadDataFlow({
             config: this.config,
