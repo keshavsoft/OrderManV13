@@ -33,7 +33,6 @@ const startFunc = ({ inTableFooter, inVisibleColumnsConfig,
 
             localTableFooter.appendChild(tr);
         };
-
     };
 
     if (inShowTotals) {

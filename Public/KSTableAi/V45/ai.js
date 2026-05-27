@@ -18,6 +18,7 @@ import { mountVerticalUI } from "./UI/mountVertical.js";
 import { mountTableOnlyUI } from "./UI/mountTableOnly.js";
 import mountShowTableUI from "./UI/mountShowTable.js";
 import mountCreate from "./UI/mountCreate.js";
+import mountTableWithFooter from "./UI/mountTableWithFooter.js";
 
 class KSAiTable {
     constructor(inConfig) {
@@ -189,7 +190,7 @@ class KSAiTable {
     };
 
     async initCreate() {
-        this.setupServices();   
+        this.setupServices();
 
         await loadDataFlow({
             config: this.config,
@@ -199,6 +200,31 @@ class KSAiTable {
         });
 
         mountCreate({
+            containerEl: this.containerEl,
+            dataStore: this.dataStore,
+            dom: this.dom,
+            services: this.services,
+            options: this.options,
+            endPoints: this.endPoints,
+            columnsConfig: this.columnsConfig,
+            uiClasses: this.uiClasses,
+            callbacks: this.callbacks,
+            inConfig: this.config,
+            inShowFooter: true
+        });
+    };
+
+    async initTableWithFooter() {
+        this.setupServices();
+
+        await loadDataFlow({
+            config: this.config,
+            services: this.services,
+            dataStore: this.dataStore,
+            endPoints: this.endPoints
+        });
+
+        mountTableWithFooter({
             containerEl: this.containerEl,
             dataStore: this.dataStore,
             dom: this.dom,

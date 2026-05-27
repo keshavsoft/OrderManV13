@@ -49,6 +49,7 @@ const startFunc = ({
 
     const isFormDisabled = options.vertical.isFormDisabled;
     const showSaveButton = options.vertical.showSaveButton;
+
     // debugger
 
     buildFullUI({
