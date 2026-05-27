@@ -5,7 +5,7 @@ import { startFunc as createFooter } from "./CreateFooter/start.js";
 import { appendFooter } from "./DomManipulation/appendFooter.js";
 
 const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
-    inTableFooter
+    inTableFooter, inShowDataList
 }) => {
 
     const localVisibleColumns = inVisibleColumnsConfig
@@ -21,8 +21,7 @@ const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
 
     const localTr = createFooter({
         inVisibleColumnsConfig: localVisibleColumns,
-        inDefaultRow,
-        keys
+        inDefaultRow, inShowDataList, keys
     });
 
     inTableFooter.appendChild(localTr);

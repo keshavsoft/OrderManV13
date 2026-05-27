@@ -31,8 +31,7 @@ const startFunc = ({
     const data = dataStore.getData();
     const showSerial = options.table.showSerial;
     const serialWidth = options.table.serialWidth;
-
-    const dataListArray = dataStore.getDataList("AccountName");
+    const showDataList = options.table.showDataList;
 
     const dataListColumns = dataStore.getDataListColumns();
 
@@ -102,18 +101,20 @@ const startFunc = ({
             inShowFooterRows: showFooterRows,
             inDefaultRow: defaultRow,
             keys: visibleColumns,
-            inDom: dom
+            inDom: dom,
+            inShowDataList: showDataList
         });
     };
 
-    // debugger;
-    buildDataLists({
-        inContainerEl: containerEl,
-        inDataStore: dataStore,
-        inDom: dom,
-        inData: data,
-        inDataListColumns: searchableColumnsConfig
-    });
+    if (showDataList) {
+        buildDataLists({
+            inContainerEl: containerEl,
+            inDataStore: dataStore,
+            inDom: dom,
+            inData: data,
+            inDataListColumns: dataListColumns
+        });
+    };
 };
 
 export default startFunc;

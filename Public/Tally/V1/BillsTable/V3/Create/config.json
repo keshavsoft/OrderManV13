@@ -26,7 +26,11 @@
             "vertical",
             "table",
             "footer"
-        ]
+        ],
+        "vertical": {
+            "isFormDisabled": false,
+            "showSaveButton": true
+        }
     },
     "columnsConfig": [
         {

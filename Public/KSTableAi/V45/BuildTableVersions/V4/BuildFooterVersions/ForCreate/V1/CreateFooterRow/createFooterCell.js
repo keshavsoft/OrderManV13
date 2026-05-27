@@ -2,7 +2,9 @@
 
 import { createFooterInput } from "./createFooterInput.js";
 
-const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig, inDefaultValue, inTdClass }) => {
+const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig,
+    inDefaultValue, inTdClass }) => {
+
     let localChangeFunc;
 
     const td = document.createElement("td");
@@ -12,7 +14,7 @@ const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig, in
     const findColumn = inColumnsConfig.find(element => {
         return element.columnName === key;
     });
-    console.log("inColumnsConfig ", findColumn, inColumnsConfig);
+    // console.log("inColumnsConfig ", findColumn, inColumnsConfig);
 
     if (findColumn && findColumn?.allowOnChange) {
         localChangeFunc = onChangeFunc;

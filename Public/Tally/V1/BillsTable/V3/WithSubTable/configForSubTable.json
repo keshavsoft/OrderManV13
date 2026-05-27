@@ -13,7 +13,10 @@
         "read": "/Api/V4/ItemsTable/ShowAll",
         "find": "",
         "filter": "",
-        "dataLists": {}
+        "dataLists": {},
+        "dataListEndpoints": {
+            "ItemName": "/Api/V4/StockItems/ShowAll"
+        }
     },
     "options": {
         "firstRow": {
@@ -25,7 +28,11 @@
             "footer"
         ],
         "table": {
-            "showFooterRows": true
+            "showFooterRows": true,
+            "showDataList": true
+        },
+        "dataList": {
+            "show": true
         }
     },
     "columnsConfig": [

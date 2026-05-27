@@ -7,9 +7,10 @@ const startFunc = ({
     localHandleOnChange,
     inVisibleColumnsConfig,
     inDefaultRow,
-    inShowSerial
+    inShowSerial,
+    inShowDataList
 }) => {
-    debugger
+    // debugger
 
     const localTr = createFooterRow({
         keys,
@@ -23,7 +24,8 @@ const startFunc = ({
         inDefaultRow,
         inTdClass: "px-4 py-2 border",
         inSerialClass: "",
-        inShowSerial
+        inShowSerial,
+        inShowDataList
     });
 
     return localTr;
