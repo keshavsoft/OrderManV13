@@ -1,5 +1,3 @@
-import { initHeader } from "../../../../../../header/v5/initHeader.js";
-
 const buildHeader = () => {
     const headerConfig = {
         items: [
@@ -33,7 +31,8 @@ const buildHeader = () => {
                     "M8 12h8",
                     "M8 16h8"
                 ],
-                href: "../../Transactions/V7/Create/index.html"
+                href: "../../V1/BillsTable/V4/Create/index.html",
+                href1: "../../Transactions/V7/Create/index.html"
             },
             {
                 text: "FromTally",
@@ -48,20 +47,9 @@ const buildHeader = () => {
         ]
     };
 
-    initHeader(headerConfig);
-};
-
-const callKSHeader = async (config) => {
-    if (window.KSHeader?.initHeader) {
-        console.log("table loaded from window.KSTable");
-
-        return window.KSHeader.initHeader(config); // extension or CDN
-    } else {
-        // const { initTableOnly } = await import("../../../../../../../../KSTableAi/V28/entry.js"); // local
-        const { initTableOnly } = await import("https://keshavsoft.github.io/KsJsTableAi/Public/kstable.js"); // local
-
-        return initTableOnly(config);
-    };
+    window.KSHeader(headerConfig); // extension or CDN
+    // initHeader(headerConfig);
+    // callKSHeader(headerConfig).then();
 };
 
 export { buildHeader };
