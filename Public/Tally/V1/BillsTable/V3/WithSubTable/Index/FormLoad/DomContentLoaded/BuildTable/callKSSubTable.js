@@ -1,4 +1,4 @@
-import { initTableWithFooter } from "/KSTableAi/V45/entry.js";
+import { initTableWithFooter } from "/KSTableAi/V46/entry.js";
 
 const callKSSubTable = async (config) => {
     return initTableWithFooter(config);
