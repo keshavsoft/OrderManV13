@@ -76,7 +76,7 @@
             }
         },
         {
-            "columnName": "LedgerGST",
+            "columnName": "PartyGSTIN",
             "dataListFillName": "PartyGSTIN",
             "cellConfig": {
                 "width": "50px"

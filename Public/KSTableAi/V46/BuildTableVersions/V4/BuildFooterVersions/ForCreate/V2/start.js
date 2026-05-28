@@ -13,7 +13,7 @@ const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
 
     const localHandleSave = (domValuesAsObject) => {
         const objectToSave = { ...domValuesAsObject, ...inDefaultRow };
-        debugger;
+        // debugger;
         createHandleSave({ inServices, inEndPoints, inPayload: objectToSave });
     };
 

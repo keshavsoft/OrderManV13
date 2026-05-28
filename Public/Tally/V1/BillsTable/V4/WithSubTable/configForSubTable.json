@@ -50,7 +50,6 @@
             "columnName": "Rate",
             "isRequired": true,
             "tableFooterDataListShow": true,
-            "defaultValue": "100",
             "cellConfig": {
                 "width": "100px"
             }
@@ -58,7 +57,6 @@
         {
             "columnName": "Qty",
             "isRequired": false,
-            "defaultValue": "2",
             "cellConfig": {
                 "width": "100px"
             }
@@ -66,7 +64,6 @@
         {
             "columnName": "Amount",
             "isRequired": false,
-            "defaultValue": "200",
             "cellConfig": {
                 "width": "100px"
             }
@@ -95,32 +92,6 @@
             "columnName": "pk",
             "isPrimaryKey": true,
             "isVisible": false
-        }
-    ],
-    "columnsConfig1": [
-        {
-            "columnName": "StockItemName",
-            "cellConfig": {
-                "width": "150px"
-            }
-        },
-        {
-            "columnName": "Rate",
-            "cellConfig": {
-                "width": "50px"
-            }
-        },
-        {
-            "columnName": "GstRegistrationType",
-            "cellConfig": {
-                "width": "50px"
-            }
-        },
-        {
-            "columnName": "PartyGSTIN",
-            "cellConfig": {
-                "width": "50px"
-            }
         }
     ],
     "uiClasses": {

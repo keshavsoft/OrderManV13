@@ -3,6 +3,7 @@ import { importVoucher } from "@keshavsoft/tallyextract";
 
 const StartFunc = async ({ inPk }) => {
     const dataToPost = clientData({ inPk });
+    console.log("dataToPost : ", dataToPost);
 
     changeDate(dataToPost);
 

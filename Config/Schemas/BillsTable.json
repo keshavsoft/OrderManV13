@@ -27,8 +27,8 @@
       "showInUi": false
     },
     {
-      "field": "LedgerGST",
-      "title": "LedgerGST",
+      "field": "PartyGSTIN",
+      "title": "PartyGSTIN",
       "type": "text",
       "isInput": true,
       "isAutoFocus": true,
