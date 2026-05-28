@@ -51,21 +51,24 @@
             "isRequired": true,
             "tableFooterDataListShow": true,
             "cellConfig": {
-                "width": "100px"
+                "width": "100px",
+                "rightAlign": true
             }
         },
         {
             "columnName": "Qty",
             "isRequired": false,
             "cellConfig": {
-                "width": "100px"
+                "width": "75px",
+                "rightAlign": true
             }
         },
         {
             "columnName": "Amount",
             "isRequired": false,
             "cellConfig": {
-                "width": "100px"
+                "width": "100px",
+                "rightAlign": true
             }
         },
         {

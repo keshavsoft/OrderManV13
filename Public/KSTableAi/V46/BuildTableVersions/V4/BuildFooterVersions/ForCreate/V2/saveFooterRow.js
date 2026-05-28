@@ -5,6 +5,9 @@ import { showErrors } from "./DomManipulation/showErrors.js";
 import { clearErrors } from "./DomManipulation/clearErrors.js";
 import { clearFooterInputs } from "./DomManipulation/clearFooterInputs.js";
 
+import { buildBody } from "../../../BuildBodyVersions/V4/start.js";
+import afterMutation from "./AfterMutation/V1/index.js";
+
 const saveFooterRow = async ({
     inDataStore,
     inDom,
@@ -13,19 +16,26 @@ const saveFooterRow = async ({
     inContainerEl,
     inOptions,
     inColumnsConfig,
-    inVisibleColumns,
+    inVisibleColumnsConfig,
     inShowActions,
     inShowSerial,
     inShowTable,
     inToSaveRow,
     tableOptions,
-    inPayload
+    inPayload,
+    inTableBody
 }) => {
     try {
         // debugger
         await inServices.actions.create({
             inEndPoint: inEndPoints.create,
             payload: inPayload
+        });
+
+        afterMutation({
+            inDataStore, inServices, inEndPoints,
+            inTableBody,
+            inVisibleColumnsConfig
         });
     } catch (err) {
         console.error(err);

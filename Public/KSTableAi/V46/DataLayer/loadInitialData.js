@@ -25,10 +25,10 @@ const loadInitialData = async ({
 
         if (!Array.isArray(dataFromFetch)) {
             throw new Error("read endpoint must return array");
-        }
+        };
 
         dataStore.setData(dataFromFetch);
-    }
+    };
     // debugger;
     // 3. Find API (dynamic id)
     if (endPoints?.find) {

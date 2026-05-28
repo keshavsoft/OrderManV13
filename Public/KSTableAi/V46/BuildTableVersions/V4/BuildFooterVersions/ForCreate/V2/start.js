@@ -6,15 +6,19 @@ import { appendFooter } from "./DomManipulation/appendFooter.js";
 
 const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
     inTableFooter, inShowDataList, inDataStore, inShowSave, inOptions,
-    inServices, inEndPoints
+    inServices, inEndPoints, inTableBody
 }) => {
 
     const localVisibleColumns = inVisibleColumnsConfig
 
     const localHandleSave = (domValuesAsObject) => {
         const objectToSave = { ...domValuesAsObject, ...inDefaultRow };
-        // debugger;
-        createHandleSave({ inServices, inEndPoints, inPayload: objectToSave });
+        debugger;
+        createHandleSave({
+            inServices, inEndPoints, inPayload: objectToSave,
+            inDataStore, inTableBody,
+            inVisibleColumnsConfig: localVisibleColumns
+        });
     };
 
     const localHandleOnChange = createHandleOnChange({

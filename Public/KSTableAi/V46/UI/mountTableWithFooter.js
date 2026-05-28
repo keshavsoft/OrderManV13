@@ -52,6 +52,8 @@ const startFunc = ({
         inIsShowHeaderRow: showSearch,
         inUiClasses: uiClasses
     });
+    debugger;
+    const tableBody = dom.getTableBody(containerEl);
 
     if (showFilterVerticalForm) {
         const searchForm = createForm({
@@ -103,7 +105,8 @@ const startFunc = ({
             inDom: dom,
             inShowDataList: showDataList,
             inDataStore: dataStore,
-            inShowSave: showSave
+            inShowSave: showSave,
+            inTableBody: tableBody
         });
     };
 
