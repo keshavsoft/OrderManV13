@@ -5,7 +5,8 @@ const startFunc = async ({
     inServices,
     inEndPoints,
     inTableBody,
-    inVisibleColumnsConfig
+    inVisibleColumnsConfig,
+    inShowSerial
 }) => {
     try {
         const dataFromFetch = await inServices.actions.getData({
@@ -19,7 +20,8 @@ const startFunc = async ({
         buildBody({
             inDataToShow: dataToShow,
             inTableBody,
-            inVisibleColumnsConfig
+            inVisibleColumnsConfig,
+            inShowSerial
         })
     } catch (err) {
         console.error(err);

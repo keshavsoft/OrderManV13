@@ -29,7 +29,8 @@
         ],
         "table": {
             "showFooterRows": true,
-            "showDataList": true
+            "showDataList": true,
+            "showSerial": true
         },
         "dataList": {
             "show": true

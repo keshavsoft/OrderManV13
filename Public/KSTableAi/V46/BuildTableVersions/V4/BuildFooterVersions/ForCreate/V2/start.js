@@ -6,18 +6,19 @@ import { appendFooter } from "./DomManipulation/appendFooter.js";
 
 const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
     inTableFooter, inShowDataList, inDataStore, inShowSave, inOptions,
-    inServices, inEndPoints, inTableBody
+    inServices, inEndPoints, inTableBody, inShowSerial
 }) => {
 
     const localVisibleColumns = inVisibleColumnsConfig
 
     const localHandleSave = (domValuesAsObject) => {
         const objectToSave = { ...domValuesAsObject, ...inDefaultRow };
-        debugger;
+        // debugger;
         createHandleSave({
             inServices, inEndPoints, inPayload: objectToSave,
             inDataStore, inTableBody,
-            inVisibleColumnsConfig: localVisibleColumns
+            inVisibleColumnsConfig: localVisibleColumns,
+            inShowSerial
         });
     };
 
@@ -31,7 +32,8 @@ const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
         inVisibleColumnsConfig: localVisibleColumns,
         inDefaultRow, inShowDataList, keys,
         onChangeFunc: localHandleOnChange,
-        inShowSave, inOnSaveFunc: localHandleSave
+        inShowSave, inOnSaveFunc: localHandleSave,
+        inShowSerial
     });
 
     inTableFooter.appendChild(localTr);

@@ -35,7 +35,8 @@ const saveFooterRow = async ({
         afterMutation({
             inDataStore, inServices, inEndPoints,
             inTableBody,
-            inVisibleColumnsConfig
+            inVisibleColumnsConfig,
+            inShowSerial
         });
     } catch (err) {
         console.error(err);

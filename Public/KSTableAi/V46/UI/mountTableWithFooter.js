@@ -52,7 +52,7 @@ const startFunc = ({
         inIsShowHeaderRow: showSearch,
         inUiClasses: uiClasses
     });
-    debugger;
+    // debugger;
     const tableBody = dom.getTableBody(containerEl);
 
     if (showFilterVerticalForm) {
