@@ -4,6 +4,7 @@ const appendFooterSaveCell = ({ inOnSaveFunc }) => {
 
     const td = document.createElement("td");
     td.className = "px-4 py-2 border";
+    td.style.width = "100px";
 
     const btn = document.createElement("button");
     btn.textContent = "Save";
@@ -28,19 +29,6 @@ const appendFooterSaveCell = ({ inOnSaveFunc }) => {
     td.appendChild(btn);
     // debugger
     return td;
-};
-
-const getFooterPayload = ({ tr, inDom, inVisibleColumns, inToSaveRow }) => {
-    const keys = inVisibleColumns;
-    const payload = {
-        ...inToSaveRow
-    };
-
-    keys.forEach((key) => {
-        payload[key] = inDom.getInputValueFromRow(tr, key);
-    });
-
-    return payload;
 };
 
 export { appendFooterSaveCell };

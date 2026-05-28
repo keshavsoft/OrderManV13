@@ -44,6 +44,7 @@ const startFunc = ({
     const showFooterRows = options?.table?.showFooterRows;
 
     const defaultRow = dataStore.getDefaultRow();
+    const showSave = true;
 
     buildFullUI({
         containerEl: containerEl,
@@ -71,7 +72,8 @@ const startFunc = ({
         inThSerialClassName: uiClasses?.thead?.thSerialClass,
         inVisibleColumnsConfig: visibleColumnsConfig,
         inShowSerial: showSerial,
-        inSerialWidth: serialWidth
+        inSerialWidth: serialWidth,
+        inShowActions: showSave
     });
 
     buildBody({
@@ -101,7 +103,7 @@ const startFunc = ({
             inDom: dom,
             inShowDataList: showDataList,
             inDataStore: dataStore,
-            inShowSave: true
+            inShowSave: showSave
         });
     };
 

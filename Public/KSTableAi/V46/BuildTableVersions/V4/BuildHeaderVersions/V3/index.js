@@ -2,7 +2,7 @@ import { startFunc as createHeaderRow } from "./CreateHeaderRow/start.js";
 
 const startFunc = ({ inContainerEl, inDom, options, inThClassName,
     inTrClassName, inThSerialClassName, inVisibleColumnsConfig,
-    inShowSerial, inSerialWidth }) => {
+    inShowSerial, inSerialWidth, inShowActions }) => {
 
     const containerEl = inContainerEl;
 
@@ -10,7 +10,7 @@ const startFunc = ({ inContainerEl, inDom, options, inThClassName,
         options, inThClassName,
         inTrClassName, inThSerialClassName,
         inVisibleColumnsConfig,
-        inShowSerial, inSerialWidth
+        inShowSerial, inSerialWidth, inShowActions
     });
 
     const tableHeader = inDom.getTableHeader(containerEl);

@@ -22,7 +22,7 @@ const saveFooterRow = async ({
     inPayload
 }) => {
     try {
-        debugger
+        // debugger
         await inServices.actions.create({
             inEndPoint: inEndPoints.create,
             payload: inPayload

@@ -23,7 +23,7 @@ const startFunc = ({ inShowSerial = false, inThClassName, inTrClassName,
     });
 
     if (inShowActions) {
-        tr.appendChild(getOptionsColumn());
+        tr.appendChild(getOptionsColumn({}));
     };
 
     return tr;
@@ -44,9 +44,10 @@ const getSerialColumn = ({ inClassName, inWidth }) => {
     return thIndex
 };
 
-const getOptionsColumn = () => {
+const getOptionsColumn = ({ inWidth }) => {
     const thIndex = document.createElement("th");
     thIndex.textContent = "options";
+    thIndex.style.width = inWidth || "50px";
 
     return thIndex
 };
