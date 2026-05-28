@@ -7,7 +7,7 @@
         "type": "table"
     },
     "endPoints": {
-        "create": "",
+        "create": "/Api/V4/ItemsTable/Insert",
         "update": "",
         "delete": "",
         "read": "/Api/V4/ItemsTable/ShowAll",
@@ -75,13 +75,15 @@
             "columnName": "TaxPer",
             "isRequired": false,
             "dataListColumn": "TaxPer",
-            "isVisible": false
+            "isVisible": false,
+            "defaultValue": "18"
         },
         {
             "columnName": "Uom",
             "isRequired": false,
             "dataListColumn": "StockBaseUnits",
-            "isVisible": false
+            "isVisible": false,
+            "defaultValue": "Nos"
         },
         {
             "columnName": "ParentPk",

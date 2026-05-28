@@ -5,7 +5,7 @@ import { createFooterInput } from "./createFooterInput.js";
 const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig,
     inDefaultValue, inTdClass }) => {
 
-    let localChangeFunc = onChangeFunc;
+    let localChangeFunc;
 
     const td = document.createElement("td");
     td.className = inTdClass;

@@ -7,8 +7,11 @@ const getKSSubTableConfig = async ({ tableName }) => {
 
     const pkFromParams = formSearchParamsFunc({ inKeyName: "pk" });
 
-    // configJson.endPoints.read = `/Api/V4/${tableName}/ShowAll`;
-    // configJson.endPoints.findFromParams = configJson.endPoints.findFromParams.replace("{pk}", pkFromParams);
+    const findColumn = configJson.columnsConfig.find(element => {
+        return element.columnName === "ParentPk";
+    });
+    // debugger;
+    findColumn.defaultValue = pkFromParams;
 
     return configJson;
 };

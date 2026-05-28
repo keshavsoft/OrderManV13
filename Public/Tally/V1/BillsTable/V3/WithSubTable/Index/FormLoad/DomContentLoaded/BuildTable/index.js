@@ -10,7 +10,7 @@ const startFunc = async () => {
     });
 
     await callKSTable(config);
-    debugger;
+    // debugger;
     const configForSubTable = await getKSSubTableConfig({
         tableName: "SubTable"
     });

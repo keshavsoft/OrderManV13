@@ -5,14 +5,17 @@ import { startFunc as createFooter } from "./CreateFooter/start.js";
 import { appendFooter } from "./DomManipulation/appendFooter.js";
 
 const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
-    inTableFooter, inShowDataList, inDataStore, inShowSave, inOptions
+    inTableFooter, inShowDataList, inDataStore, inShowSave, inOptions,
+    inServices, inEndPoints
 }) => {
 
     const localVisibleColumns = inVisibleColumnsConfig
 
-    const localHandleSave =
-        createHandleSave(inOptions);
-    // debugger;
+    const localHandleSave = (domValuesAsObject) => {
+        const objectToSave = { ...domValuesAsObject, ...inDefaultRow };
+        debugger;
+        createHandleSave({ inServices, inEndPoints, inPayload: objectToSave });
+    };
 
     const localHandleOnChange = createHandleOnChange({
         inDataStore,

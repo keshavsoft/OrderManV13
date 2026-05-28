@@ -4,6 +4,7 @@ import { ConflictError, StorageError } from "./errors.js";
 const filterColumnsFunc = ({ req, res, inTableName }) => {
     try {
         const requestQuery = req.query;
+        console.log("requestQuery : ", requestQuery);
 
         const message = filterItems({
             inRequestQuery: requestQuery,

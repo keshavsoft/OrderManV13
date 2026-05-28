@@ -45,11 +45,6 @@ const startFunc = ({
 
     const defaultRow = dataStore.getDefaultRow();
 
-    // const columns = dataStore.getColumns();
-
-    // console.log("aaaaaaaaaa : ", visibleColumns);
-
-
     buildFullUI({
         containerEl: containerEl,
         inTableName: inConfig.tableName,
@@ -89,6 +84,8 @@ const startFunc = ({
 
     if (inShowFooter) {
         buildFooter({
+            inServices: services,
+            inEndPoints: endPoints,
             inTableFooter: dom.getTableFooter(containerEl),
             inOptions: options,
             inVisibleColumnsConfig: visibleColumnsConfig,

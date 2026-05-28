@@ -6,7 +6,6 @@ import { clearErrors } from "./DomManipulation/clearErrors.js";
 import { clearFooterInputs } from "./DomManipulation/clearFooterInputs.js";
 
 const saveFooterRow = async ({
-    tr,
     inDataStore,
     inDom,
     inServices,
@@ -19,33 +18,21 @@ const saveFooterRow = async ({
     inShowSerial,
     inShowTable,
     inToSaveRow,
-    tableOptions
+    tableOptions,
+    inPayload
 }) => {
-    // debugger;
-    const payload = getFooterPayload({
-        tr, inDom,
-        inVisibleColumns, inToSaveRow
-    });
-
-    clearErrors(tr);
-
-    const errors = validateRow({ payload, inColumnsConfig });
-    if (errors.length) {
-        showErrors(tr, errors);
-        return;
-    };
-
     try {
+        debugger
         await inServices.actions.create({
             inEndPoint: inEndPoints.create,
-            payload
+            payload: inPayload
         });
     } catch (err) {
         console.error(err);
         return;
-    }
+    };
 
-    clearFooterInputs(tr);
+    // clearFooterInputs(tr);
 
     // await afterMutation({
     //     inServices,
