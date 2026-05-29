@@ -88,7 +88,8 @@ const startFunc = ({
         inContainerEl: containerEl,
         inDom: dom,
         inVisibleColumnsConfig: visibleColumnsConfig,
-        inShowSerial: showSerial
+        inShowSerial: showSerial,
+        inShowActions: showActions
     });
 
     if (showFooter) {

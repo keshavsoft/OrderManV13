@@ -1,7 +1,7 @@
 import { buildRow } from "./buildRow.js";
 
 const buildBody = ({ inDataStore, inContainerEl, inDom, inShowSerial = false,
-    inVisibleColumnsConfig
+    inVisibleColumnsConfig, inShowActions
 }) => {
     const containerEl = inContainerEl;
 
@@ -13,7 +13,8 @@ const buildBody = ({ inDataStore, inContainerEl, inDom, inShowSerial = false,
     dataToShow.forEach((item, index) => {
         const row = buildRow({
             item, index, inVisibleColumnsConfig,
-            inShowSerial
+            inShowSerial,
+            inShowActions
         });
 
         tableBody.appendChild(row);

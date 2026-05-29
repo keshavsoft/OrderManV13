@@ -29,7 +29,7 @@
             "showFooterRows": false,
             "showDataList": false,
             "showSerial": true,
-            "showActons": false,
+            "showActions": true,
             "showSave": false,
             "serialWidth": "25px",
             "showFooter": true

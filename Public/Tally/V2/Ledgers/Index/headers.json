@@ -25,7 +25,7 @@
             ]
         },
         {
-            "text": "Transactions",
+            "text": "Bills",
             "id": "1",
             "icon": [
                 "M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z",
@@ -33,7 +33,7 @@
                 "M8 12h8",
                 "M8 16h8"
             ],
-            "href": "../../Transactions/V7/Create/index.html"
+            "href": "../BillsTable/V2/Create/index.html"
         },
         {
             "text": "FromTally",

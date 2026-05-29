@@ -3,7 +3,7 @@ import { createIndexCell } from "./createIndexCell.js";
 import createDataCell from "./CreateDataCell/index.js";
 import { createOptionsCell } from "./createOptionsCell.js";
 
-const buildRow = ({ item, index, inVisibleColumnsConfig, options, searchValue,
+const buildRow = ({ item, index, inVisibleColumnsConfig, searchValue,
     inShowSerial, inShowActions = false
 }) => {
     const tr = createRow({
@@ -19,7 +19,7 @@ const buildRow = ({ item, index, inVisibleColumnsConfig, options, searchValue,
     });
 
     if (inShowActions) {
-        appendActionCell({ tr, item, index, options, searchValue });
+        appendActionCell({ tr, item, index, searchValue });
     };
 
     return tr;
@@ -41,15 +41,15 @@ const appendDataCells = ({ tr, item, columns, searchValue }) => {
     };
 };
 
-const appendActionCell = ({ tr, item, index, inShowActions, searchValue }) => {
+const appendActionCell = ({ tr, item, index, inShowActions, options = {}, searchValue }) => {
     // debugger;
 
     tr.appendChild(
         createOptionsCell({
             item,
             index,
-            onEdit: options.onEdit,
-            onDelete: options.onDelete
+            onEdit: options?.onEdit,
+            onDelete: options?.onDelete
         })
     );
 };
