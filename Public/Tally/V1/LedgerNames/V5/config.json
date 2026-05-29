@@ -14,8 +14,7 @@
         "find": "",
         "filter": "",
         "dataLists": {},
-        "dataListEndpoints": {
-        }
+        "dataListEndpoints": {}
     },
     "options": {
         "firstRow": {
@@ -28,8 +27,12 @@
         ],
         "table": {
             "showFooterRows": false,
+            "showFooter": false,
             "showDataList": false,
-            "showSerial": true
+            "showSerial": true,
+            "showActons": false,
+            "showSave": false,
+            "serialWidth": "25px"
         },
         "dataList": {
             "show": false
