@@ -10,7 +10,7 @@
         "create": "/Api/V4/ItemsTable/Insert",
         "update": "",
         "delete": "/Api/V4/ItemsTable/Delete",
-        "read": "/Api/V4/ItemsTable/FilterColumns",
+        "read": "/Api/V4/ItemsTable/FilterColumns?ParentPk=",
         "find": "",
         "filter": "",
         "dataLists": {},

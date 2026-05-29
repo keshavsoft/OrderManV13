@@ -34,7 +34,8 @@ const afterHeadSave = async (inPk) => {
         return element.columnName === "ParentPk";
     });
 
-    findColumn.defaultValue = inPk;
+    findColumn.defaultValue = inPk.toString();
+    configForSubTableJson.endPoints.read += inPk.toString();
 
     if (window.KSTable) {
         console.log("table loaded from cdn");
