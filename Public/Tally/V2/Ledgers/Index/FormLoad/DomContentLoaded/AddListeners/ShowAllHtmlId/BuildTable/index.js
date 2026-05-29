@@ -1,4 +1,4 @@
-import { initTableWithFooter } from "/KSTableAi/V4/entry.js";
+import { initTableWithFooter, initShowTable } from "/KSTableAi/V4/entry.js";
 
 const startFunc = async () => {
     const config = await fetch("config.json");

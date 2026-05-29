@@ -7,6 +7,9 @@ import buildDataLists from "../BuildDataLists/V2/addToDom.js";
 
 import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForCreate/V2/start.js";
 
+import SearchFuncs from "../TableFirstRow/V3/SearchFuncs/V4/index.js";
+import setFocus from "../UI/SetFocus/V1/index.js";
+
 import { buildFullUI } from "./compose/buildFullUI.js";
 
 const startFunc = ({
@@ -47,7 +50,7 @@ const startFunc = ({
     const showActions = options?.table?.showActions;
     const showFooter = options?.table?.showFooter;
 
-    debugger;
+    // debugger;
     buildFullUI({
         containerEl: containerEl,
         inTableName: inConfig.tableName,
@@ -121,6 +124,13 @@ const startFunc = ({
             inDataListColumns: dataListColumns
         });
     };
+
+    if (showSearch) {
+        // for search vertical
+        SearchFuncs({ inContainerEl: containerEl });
+    };
+
+    setFocus({ inContainerEl: containerEl });
 };
 
 export default startFunc;

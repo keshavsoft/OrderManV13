@@ -1,6 +1,6 @@
 {
     "containerId": "kSTableContainer",
-    "tableName": "Sub",
+    "tableName": "Ledger Names",
     "mode": "create",
     "layout": {
         "verticalPosition": "top",
@@ -18,7 +18,7 @@
     },
     "options": {
         "firstRow": {
-            "showSearch": false
+            "showSearch": true
         },
         "enabledSections": [
             "vertical",
@@ -31,7 +31,8 @@
             "showSerial": true,
             "showActons": false,
             "showSave": false,
-            "serialWidth": "25px"
+            "serialWidth": "25px",
+            "showFooter": true
         },
         "dataList": {
             "show": false
