@@ -1,0 +1,106 @@
+{
+    "containerId": "kSSubTableContainer",
+    "tableName": "Sub",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "endPoints": {
+        "create": "/Api/V4/ItemsTable/Insert",
+        "update": "",
+        "delete": "",
+        "read": "/Api/V4/ItemsTable/FilterColumns",
+        "find": "",
+        "filter": "",
+        "dataLists": {},
+        "dataListEndpoints": {
+            "ItemName": "/Api/V4/StockItems/ShowAll"
+        }
+    },
+    "options": {
+        "firstRow": {
+            "showSearch": false
+        },
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ],
+        "table": {
+            "showFooterRows": true,
+            "showDataList": true,
+            "showSerial": true
+        },
+        "dataList": {
+            "show": true
+        }
+    },
+    "columnsConfig": [
+        {
+            "columnName": "ItemName",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "dataListSource": "ItemName.StockItemName",
+            "allowOnChange": false,
+            "cellConfig": {
+                "width": "250px"
+            }
+        },
+        {
+            "columnName": "Rate",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
+            }
+        },
+        {
+            "columnName": "Qty",
+            "isRequired": false,
+            "cellConfig": {
+                "width": "75px",
+                "rightAlign": true
+            }
+        },
+        {
+            "columnName": "Amount",
+            "isRequired": false,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
+            }
+        },
+        {
+            "columnName": "TaxPer",
+            "isRequired": false,
+            "dataListColumn": "TaxPer",
+            "isVisible": false,
+            "defaultValue": "18"
+        },
+        {
+            "columnName": "Uom",
+            "isRequired": false,
+            "dataListColumn": "StockBaseUnits",
+            "isVisible": false,
+            "defaultValue": "Nos"
+        },
+        {
+            "columnName": "ParentPk",
+            "isRequired": false,
+            "defaultValue": "pkFromParams",
+            "isVisible": false
+        },
+        {
+            "columnName": "pk",
+            "isPrimaryKey": true,
+            "isVisible": false
+        }
+    ],
+    "uiClasses": {
+        "table": {
+            "tableClass": "table bg-white table-fixed w-full"
+        }
+    }
+}

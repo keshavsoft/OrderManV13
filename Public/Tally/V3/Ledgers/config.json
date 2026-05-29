@@ -1,0 +1,76 @@
+{
+    "containerId": "kSTableContainer",
+    "tableName": "Ledger Names",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "endPoints": {
+        "create": "",
+        "update": "",
+        "delete": "",
+        "read": "/Api/V4/LedgerNames/ShowAll",
+        "find": "",
+        "filter": "",
+        "dataLists": {},
+        "dataListEndpoints": {}
+    },
+    "options": {
+        "firstRow": {
+            "showSearch": true
+        },
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ],
+        "table": {
+            "showFooterRows": false,
+            "showDataList": false,
+            "showSerial": true,
+            "showActions": true,
+            "showSave": false,
+            "serialWidth": "25px",
+            "showFooter": true
+        },
+        "dataList": {
+            "show": false
+        }
+    },
+    "columnsConfig": [
+        {
+            "columnName": "LedgerName",
+            "title": "Ledger Name",
+            "cellConfig": {
+                "width": "150px"
+            }
+        },
+        {
+            "columnName": "LedgerParentName",
+            "title": "Parent Name",
+            "cellConfig": {
+                "width": "100px"
+            }
+        },
+        {
+            "columnName": "GstRegistrationType",
+            "cellConfig": {
+                "width": "75px"
+            },
+            "title": "Gst Registration Type"
+        },
+        {
+            "columnName": "PartyGSTIN",
+            "title": "Party GSTIN",
+            "cellConfig": {
+                "width": "100px"
+            }
+        }
+    ],
+    "uiClasses": {
+        "table": {
+            "tableClass": "table bg-white table-fixed w-full"
+        }
+    }
+}
