@@ -57,15 +57,10 @@ const loadInitialData = async ({
         }
     };
 
-    if (endPoints?.findFromParams) {
+    if (endPoints.findFromParams) {
         const dataFromFetch = await services.actions.findFromParams({
             inEndPoint: endPoints.findFromParams
         });
-        // console.log("dataFromFetch : ", dataFromFetch);
-
-        // if (!Array.isArray(dataFromFetch)) {
-        //     throw new Error("read endpoint must return array");
-        // }
 
         dataStore.setFindFromParams(dataFromFetch);
     };

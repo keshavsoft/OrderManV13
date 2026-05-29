@@ -1,5 +1,5 @@
 import buildHeader from "../BuildTableVersions/V4/BuildHeaderVersions/V4/index.js";
-import { buildBody } from "../BuildTableVersions/V4/BuildBodyVersions/V3/start.js";
+import { buildBody } from "../BuildTableVersions/V4/BuildBodyVersions/V5/start.js";
 import createForm from "../BuildSearchForm/V1/createForm.js";
 import buildDataLists from "../BuildDataLists/V2/addToDom.js";
 
@@ -34,6 +34,7 @@ const startFunc = ({
     const showSerial = options.table.showSerial;
     const serialWidth = options.table.serialWidth;
     const showDataList = options.table.showDataList;
+    const optionsWidth = options.table.optionsWidth;
 
     const dataListColumns = dataStore.getDataListColumns();
 
@@ -80,7 +81,8 @@ const startFunc = ({
         inVisibleColumnsConfig: visibleColumnsConfig,
         inShowSerial: showSerial,
         inSerialWidth: serialWidth,
-        inShowActions: showActions || showSave
+        inShowActions: showActions || showSave,
+        inOptionsWidth: optionsWidth,
     });
 
     buildBody({
@@ -89,7 +91,12 @@ const startFunc = ({
         inDom: dom,
         inVisibleColumnsConfig: visibleColumnsConfig,
         inShowSerial: showSerial,
-        inShowActions: showActions
+        inShowActions: showActions,
+        inServices: services,
+        inEndPoints: endPoints,
+        inConfig,
+        inTableBody: tableBody,
+        inData: data
     });
 
     if (showFooter) {

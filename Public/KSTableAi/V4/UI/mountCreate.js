@@ -1,11 +1,13 @@
 import buildHeader from "../BuildTableVersions/V4/BuildHeaderVersions/V4/index.js";
-import { buildBody } from "../BuildTableVersions/V4/BuildBodyVersions/V3/start.js";
+import { buildBody } from "../BuildTableVersions/V4/BuildBodyVersions/V5/start.js";
 // import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForSummary/V8/start.js";
 import createForm from "../BuildSearchForm/V2/createForm.js";
 import buildDataLists from "../BuildDataLists/V2/addToDom.js";
 
 import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForSummary/V8/CreateFooterRow/V3/start.js";
 import SearchFuncs from "../TableFirstRow/V3/SearchFuncs/V4/index.js";
+
+import setFocus from "../UI/SetFocus/V2/index.js";
 
 import { buildFullUI } from "./compose/buildFullUI.js";
 
@@ -39,7 +41,7 @@ const startFunc = ({
     const showTotals = options.table.showTotals;
     const showBalance = options.table.showBalance;
     const showFilterVerticalForm = options.showFilterVerticalForm;
-    const showSearch = options.firstRow.showSearch;
+    const showSearch = options?.firstRow?.showSearch;
     const showTotalsForSearch = options?.table?.showTotalsForSearch;
     const showBalanceForSearch = options?.table?.showBalanceForSearch;
     const showFooterRows = options?.table?.showFooterRows;
@@ -103,11 +105,13 @@ const startFunc = ({
         inDataListColumns: visibleColumnsConfig
     });
 
-    // debugger;
+    debugger;
     if (showSearch) {
         // for search vertical
         SearchFuncs({ inContainerEl: containerEl });
     };
+
+    setFocus({ inContainerEl: containerEl });
 };
 
 export default startFunc;

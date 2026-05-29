@@ -36,8 +36,8 @@
             "href": "../../Transactions/V7/Create/index.html"
         },
         {
-            "text": "FromTally",
-            "id": "ImportHtmlId",
+            "text": "ToTally",
+            "id": "toTallyId",
             "icon": [
                 "M4 6h16",
                 "M4 10h16",

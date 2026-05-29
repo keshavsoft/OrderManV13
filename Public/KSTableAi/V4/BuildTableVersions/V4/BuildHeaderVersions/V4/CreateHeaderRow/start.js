@@ -2,7 +2,7 @@ import insertCells from "./insertCells.js";
 
 const startFunc = ({ inShowSerial = false, inThClassName, inTrClassName,
     inThSerialClassName, inShowActions = false, inVisibleColumnsConfig,
-    inSerialWidth
+    inSerialWidth, inOptionsWidth
 }) => {
     const tr = document.createElement("tr");
     const thSerialClassName = inThSerialClassName;
@@ -23,7 +23,7 @@ const startFunc = ({ inShowSerial = false, inThClassName, inTrClassName,
     });
 
     if (inShowActions) {
-        tr.appendChild(getOptionsColumn({}));
+        tr.appendChild(getOptionsColumn({ inWidth: inOptionsWidth }));
     };
 
     return tr;
