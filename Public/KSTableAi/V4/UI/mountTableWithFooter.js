@@ -119,7 +119,8 @@ const startFunc = ({
             inShowDataList: showDataList,
             inDataStore: dataStore,
             inShowSave: showSave,
-            inTableBody: tableBody
+            inTableBody: tableBody,
+            inShowActions: showActions
         });
     };
 

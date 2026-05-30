@@ -6,7 +6,7 @@ import { appendFooter } from "./DomManipulation/appendFooter.js";
 
 const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
     inTableFooter, inShowDataList, inDataStore, inShowSave, inOptions,
-    inServices, inEndPoints, inTableBody, inShowSerial
+    inServices, inEndPoints, inTableBody, inShowSerial, inShowActions
 }) => {
 
     const localVisibleColumns = inVisibleColumnsConfig
@@ -18,7 +18,7 @@ const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
             inServices, inEndPoints, inPayload: objectToSave,
             inDataStore, inTableBody,
             inVisibleColumnsConfig: localVisibleColumns,
-            inShowSerial
+            inShowSerial, inShowActions
         });
     };
 

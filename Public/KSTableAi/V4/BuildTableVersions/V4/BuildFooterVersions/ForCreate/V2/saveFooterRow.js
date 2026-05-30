@@ -6,7 +6,8 @@ import { clearErrors } from "./DomManipulation/clearErrors.js";
 import { clearFooterInputs } from "./DomManipulation/clearFooterInputs.js";
 
 import { buildBody } from "../../../BuildBodyVersions/V4/start.js";
-import afterMutation from "./AfterMutation/V1/index.js";
+// import afterMutation from "./AfterMutation/V1/index.js";
+import afterMutation from "../../../AfterMutation/V3/index.js";
 
 const saveFooterRow = async ({
     inDataStore,
@@ -34,9 +35,8 @@ const saveFooterRow = async ({
 
         afterMutation({
             inDataStore, inServices, inEndPoints,
-            inTableBody,
-            inVisibleColumnsConfig,
-            inShowSerial
+            inTableBody, inVisibleColumnsConfig,
+            inShowSerial, inShowActions
         });
     } catch (err) {
         console.error(err);
