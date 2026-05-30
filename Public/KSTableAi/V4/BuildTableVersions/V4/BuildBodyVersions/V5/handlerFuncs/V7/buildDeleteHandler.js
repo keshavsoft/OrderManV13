@@ -3,7 +3,9 @@ import { deleteFromServer } from "./deleteFromServer.js";
 import { runDeleteCallback } from "./runDeleteCallback.js";
 import { showToast } from "./showToast.js";
 
-import afterMutation from "../../../../AfterMutation/V2/index.js";
+// import afterMutation from "../../../../AfterMutation/V2/index.js";
+
+import afterMutation from "../../../../AfterMutation/V3/index.js";
 
 const buildDeleteHandler = ({
     inServices,
@@ -12,7 +14,8 @@ const buildDeleteHandler = ({
     inDataStore,
     inVisibleColumnsConfig,
     inShowSerial,
-    inTableBody
+    inTableBody,
+    inShowActions
 }) => {
     const refreshAfterDelete = () => {
         afterMutation({
@@ -21,7 +24,8 @@ const buildDeleteHandler = ({
             inEndPoints,
             inTableBody,
             inVisibleColumnsConfig,
-            inShowSerial
+            inShowSerial,
+            inShowActions
         });
     };
 

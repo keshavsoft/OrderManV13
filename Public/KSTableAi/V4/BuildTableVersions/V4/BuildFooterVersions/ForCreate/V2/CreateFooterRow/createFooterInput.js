@@ -25,7 +25,7 @@ const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
         //need to add to dataset also for further use, like clear values
         input.dataset.defaultValue = inDefaultValue;
     };
-    debugger;
+    // debugger;
     if (onChangeFunc) {
         input.addEventListener(
             "change",

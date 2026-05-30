@@ -17,7 +17,8 @@ const buildBody = ({ inDataStore, inDom, inShowSerial = false,
         inDataStore,
         inVisibleColumnsConfig,
         inShowSerial,
-        inTableBody: tableBody
+        inTableBody: tableBody,
+        inShowActions
     });
 
     // debugger;
