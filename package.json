@@ -16,22 +16,23 @@
     "@yao-pkg/pkg": "^6.19.0",
     "body-parser": "^2.2.0",
     "dotenv": "^17.4.2",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "lowdb": "^7.0.1"
   },
   "devDependencies": {
-    "@keshavsoft/kschema-api-gen": "^1.11.1",
-    "@keshavsoft/kschema-cli-samples": "^1.15.2",
     "@keshavsoft/kschema-api-check": "^1.12.1",
-    "kschema-api-gen-appjs": "^1.4.2",
-    "kschema-api-gen-routesjs": "^1.2.1",
-    "kschema-api-gen-endpointsjs": "^1.1.1",
+    "@keshavsoft/kschema-api-gen": "^1.11.1",
     "@keshavsoft/kschema-api-gen-actions": "^1.18.3",
+    "@keshavsoft/kschema-cli-samples": "^1.15.2",
+    "express-fix-js": "^1.6.5",
     "json-crud-ui": "^1.3.2",
-    "tailwind-todo": "^1.5.9",
     "json-crud-ui-components": "^1.7.2",
     "json-crud-ui-init": "^1.5.1",
     "json-crud-ui-table": "^1.3.2",
-    "express-fix-js": "^1.6.5",
-    "kschema-fs-api-gen-actions": "^1.3.3"
+    "kschema-api-gen-appjs": "^1.4.2",
+    "kschema-api-gen-endpointsjs": "^1.1.1",
+    "kschema-api-gen-routesjs": "^1.2.1",
+    "kschema-fs-api-gen-actions": "^1.3.3",
+    "tailwind-todo": "^1.5.9"
   }
 }
