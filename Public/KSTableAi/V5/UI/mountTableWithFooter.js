@@ -8,7 +8,7 @@ import buildDataLists from "../BuildDataLists/V2/addToDom.js";
 import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForCreate/V2/start.js";
 
 import SearchFuncs from "../TableFirstRow/V3/SearchFuncs/V4/index.js";
-import setFocus from "../UI/SetFocus/V1/index.js";
+import setFocus from "../UI/SetFocus/V3/index.js";
 
 import { buildFullUI } from "./compose/buildFullUI.js";
 

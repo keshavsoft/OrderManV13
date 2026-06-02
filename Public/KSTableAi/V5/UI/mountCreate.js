@@ -105,7 +105,7 @@ const startFunc = ({
         inDataListColumns: visibleColumnsConfig
     });
 
-    debugger;
+    // debugger;
     if (showSearch) {
         // for search vertical
         SearchFuncs({ inContainerEl: containerEl });

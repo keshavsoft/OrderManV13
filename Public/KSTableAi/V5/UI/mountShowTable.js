@@ -22,7 +22,7 @@ const startFunc = ({
     inConfig,
     inShowFooter = false
 }) => {
-    debugger
+    // debugger
 
     const visibleColumns = dataStore.getVisibleColumns();
     const visibleColumnsConfig = dataStore.getVisibleColumnsConfig();

@@ -6,10 +6,12 @@ import buildTableShell from "../BuilderVersions/V1/buildTableShell.js";
 
 export const buildFullUI = ({ containerEl, inTableName, inIsDataListNeeded = true,
     inIsTableNeeded = true, inIsShowHeaderRow = false,
-    inUiClasses }) => {
+    inUiClasses, clearOld = true }) => {
 
     const root = containerEl;
     root.className = "max-w-6xl mx-auto p-2";
+    debugger;
+    if (clearOld) root.innerHTML = "";
 
     let children = [];
 
