@@ -5,12 +5,12 @@ const ajv = new Ajv();
 const schema = {
     type: "object",
     properties: {
-        LedgerName: {
-            type: "string"
+        insertedToTally: {
+            type: "boolean"
         }
     },
-    required: ["LedgerName"],
-    additionalProperties: true
+    required: ["insertedToTally"],
+    additionalProperties: false
 };
 
 const validate = ajv.compile(schema);
