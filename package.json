@@ -33,7 +33,7 @@
     "kschema-api-gen-appjs": "^1.4.2",
     "kschema-api-gen-endpointsjs": "^1.1.1",
     "kschema-api-gen-routesjs": "^1.2.1",
-    "kschema-fs-api-gen-actions": "^1.3.3",
+    "kschema-fs-api-gen-actions": "^1.7.6",
     "tailwind-todo": "^1.5.9"
   }
 }
