@@ -51,6 +51,17 @@
             "allowOnChange": true,
             "cellConfig": {
                 "width": "250px"
+            },
+            "onChangeType": "onDataListChange"
+        },
+        {
+            "columnName": "RateInc",
+            "title": "Rate Inc",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
             }
         },
         {

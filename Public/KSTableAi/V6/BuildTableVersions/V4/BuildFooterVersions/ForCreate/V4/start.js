@@ -22,18 +22,13 @@ const buildFooter = ({ inVisibleColumnsConfig, inDefaultRow, keys,
         });
     };
 
-    // const localHandleOnChange1 = createHandleOnChange({
-    //     inDataStore,
-    //     inColumnsConfig: localVisibleColumns,
-    //     inToSaveRow: inDefaultRow
-    // });
-
-    const localHandleOnChange = ({ inCurrentTarget }) => {
+    const localHandleOnChange = ({ inCurrentTarget, inChangeType }) => {
         createHandleOnChange({
             inDataStore,
             inColumnsConfig: localVisibleColumns,
             inToSaveRow: inDefaultRow,
-            inCurrentTarget
+            inCurrentTarget,
+            inChangeType
         });
     };
 

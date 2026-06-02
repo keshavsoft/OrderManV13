@@ -4,14 +4,22 @@ const startFunc = ({
     inDataStore,
     inColumnsConfig,
     inToSaveRow,
-    inCurrentTarget
+    inCurrentTarget,
+    inChangeType
 }) => {
-    onDataListChange({
-        inCurrentTarget, inDataStore,
-        inColumnsConfig,
-        inToSaveRow
-    });
+    switch (inChangeType) {
+        case "onDataListChange":
+            onDataListChange({
+                inCurrentTarget, inDataStore,
+                inColumnsConfig,
+                inToSaveRow
+            });
 
+            break;
+
+        default:
+            break;
+    };
     // return localFunction;
 };
 

@@ -33,6 +33,22 @@
       "showInUi": true
     },
     {
+      "field": "RateInc",
+      "title": "Rate Inc",
+      "unique": false,
+      "type": "number",
+      "isNumber": true,
+      "ShowTotal": false,
+      "footerFormatter": "",
+      "showRupee": true,
+      "align": "right",
+      "WidthOptions": {
+        "inPx": 250
+      },
+      "isConsider": true,
+      "showInUi": true
+    },
+    {
       "field": "Qty",
       "title": "Qty",
       "unique": false,

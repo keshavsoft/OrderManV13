@@ -16,14 +16,16 @@ const appendFooterSaveCell = ({ inOnSaveFunc }) => {
         const currentTarget = e.currentTarget;
         const closestFooter = currentTarget.closest("tfoot");
         const inputs = closestFooter.querySelectorAll("input");
-
+        
         const data = {};
 
         inputs.forEach((input) => {
             data[input.name] = input.value;
         });
 
-        inOnSaveFunc({ dataFromDom: data, inCurrentTarget: currentTarget });
+        inOnSaveFunc({
+            dataFromDom: data, inCurrentTarget: currentTarget,
+        });
     };
 
     td.appendChild(btn);

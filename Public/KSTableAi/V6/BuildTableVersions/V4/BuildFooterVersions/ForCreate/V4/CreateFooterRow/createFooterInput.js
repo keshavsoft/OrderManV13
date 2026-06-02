@@ -1,7 +1,7 @@
 // createFooterInput.js
 
 const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
-    inDefaultValue, inClasses
+    inDefaultValue, inClasses, inOnChangeType
 }) => {
     const input = document.createElement("input");
 
@@ -9,6 +9,8 @@ const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
     input.placeholder = key;
     input.name = key;
     input.className = "w-full px-2 py-1 border rounded text-md";
+
+    if (inOnChangeType) input.dataset.onChangeType = inOnChangeType;
 
     const findColumn = inColumnsConfig.find(element => {
         return element.columnName === key;
@@ -26,16 +28,20 @@ const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
         input.dataset.defaultValue = inDefaultValue;
     };
     // debugger;
-    console.log(" : ", onChangeFunc);
+    // console.log(" : ", onChangeFunc);
 
     if (onChangeFunc) {
         input.addEventListener(
             "change", (event) => {
                 const localCurrentTarget = event.currentTarget;
+                const onChangeType = localCurrentTarget.dataset.onChangeType;
 
-                console.log("localCurrentTarget : ", localCurrentTarget);
+                console.log("onChangeType : ", localCurrentTarget, localCurrentTarget.dataset, onChangeType);
 
-                onChangeFunc({ inCurrentTarget: localCurrentTarget });
+                onChangeFunc({
+                    inCurrentTarget: localCurrentTarget,
+                    inChangeType: onChangeType
+                });
             }
         );
     };

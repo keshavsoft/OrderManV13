@@ -25,7 +25,8 @@ const startFunc = ({
         inShowDataList,
         inShowSave,
         inOnSaveFunc,
-        onChangeFunc
+        onChangeFunc,
+        inVisibleColumnsConfig
     });
 
     return localTr;
