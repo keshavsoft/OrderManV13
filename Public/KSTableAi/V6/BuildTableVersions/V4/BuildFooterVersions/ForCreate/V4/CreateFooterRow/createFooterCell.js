@@ -1,9 +1,11 @@
 // createFooterCell.js
 
-import { createFooterInput } from "./createFooterInput.js";
+// import { createFooterInput } from "./createFooterInput.js";
+import createFooterInput from "./CreateFooterInput/start.js";
 
 const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig,
-    inDefaultValue, inTdClass, inAllowOnChange = false, inOnChangeType }) => {
+    inDefaultValue, inTdClass, inAllowOnChange = false, inOnChangeType,
+    inOnKeyDown, inOnKeyDownType }) => {
 
     let localChangeFunc;
 
@@ -15,7 +17,7 @@ const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig,
     };
 
     const input = createFooterInput({
-        key, onChangeFunc: localChangeFunc,
+        key, onChangeFunc: localChangeFunc, inOnKeyDown, inOnKeyDownType,
         showDataList, inColumnsConfig, inDefaultValue, inOnChangeType
     });
     // debugger;

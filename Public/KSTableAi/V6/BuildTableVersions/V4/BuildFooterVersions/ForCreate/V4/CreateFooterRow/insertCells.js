@@ -32,7 +32,9 @@ const startFunc = ({ keys, tr, options = {}, inDefaultRow, inTdClass,
             inColumnsConfig: options.inColumnsConfig,
             inTdClass,
             inAllowOnChange: loopColumn.allowOnChange,
-            inOnChangeType: loopColumn.onChangeType
+            inOnChangeType: loopColumn.onChangeType,
+            inOnKeyDown: loopColumn?.onKeyDown,
+            inOnKeyDownType: loopColumn?.onKeyDownType
         });
 
         tr.appendChild(createdFooterCell);

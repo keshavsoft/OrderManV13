@@ -1,8 +1,10 @@
 // createFooterInput.js
 
 const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
-    inDefaultValue, inClasses, inOnChangeType
+    inDefaultValue, inClasses, inOnChangeType, inOnKeyDown = false,
+    inOnKeyDownType
 }) => {
+    
     const input = document.createElement("input");
 
     input.type = "text";
@@ -36,12 +38,31 @@ const createFooterInput = ({ key, onChangeFunc, showDataList, inColumnsConfig,
                 const localCurrentTarget = event.currentTarget;
                 const onChangeType = localCurrentTarget.dataset.onChangeType;
 
-                console.log("onChangeType : ", localCurrentTarget, localCurrentTarget.dataset, onChangeType);
+                // console.log("onChangeType : ", localCurrentTarget, localCurrentTarget.dataset, onChangeType);
 
                 onChangeFunc({
                     inCurrentTarget: localCurrentTarget,
                     inChangeType: onChangeType
                 });
+            }
+        );
+    };
+
+    if (inOnKeyDown) {
+        input.addEventListener(
+            "keydown", (event) => {
+                if (event.key === "Enter") {
+                    const localCurrentTarget = event.currentTarget;
+                    // const closestTr = localCurrentTarget.closest("tr");
+                    const currentTd = event.currentTarget.closest("td");
+                    const nextInput = currentTd?.nextElementSibling?.querySelector("input");
+
+                    if (nextInput) {
+                        nextInput.focus();
+                    };
+
+                    // console.log("Enter pressed");
+                };
             }
         );
     };

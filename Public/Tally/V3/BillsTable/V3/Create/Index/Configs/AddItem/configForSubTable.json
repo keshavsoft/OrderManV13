@@ -52,7 +52,8 @@
             "cellConfig": {
                 "width": "250px"
             },
-            "onChangeType": "onDataListChange"
+            "onChangeType": "onDataListChange",
+            "onKeyDown": true
         },
         {
             "columnName": "RateInc",
@@ -62,7 +63,8 @@
             "cellConfig": {
                 "width": "100px",
                 "rightAlign": true
-            }
+            },
+            "onKeyDown": false
         },
         {
             "columnName": "Rate",
@@ -72,7 +74,8 @@
             "cellConfig": {
                 "width": "100px",
                 "rightAlign": true
-            }
+            },
+            "onKeyDown": true
         },
         {
             "columnName": "Qty",
@@ -81,7 +84,9 @@
             "cellConfig": {
                 "width": "75px",
                 "rightAlign": true
-            }
+            },
+            "onKeyDown": true,
+            "onKeyDownType": "Qty"
         },
         {
             "columnName": "Amount",
@@ -90,7 +95,9 @@
             "cellConfig": {
                 "width": "100px",
                 "rightAlign": true
-            }
+            },
+            "onKeyDown": true,
+            "onKeyDownType": "Amount"
         },
         {
             "columnName": "TaxPer",
