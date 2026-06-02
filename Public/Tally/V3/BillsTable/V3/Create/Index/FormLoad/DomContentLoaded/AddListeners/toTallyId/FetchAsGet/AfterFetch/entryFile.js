@@ -1,12 +1,14 @@
-let StartFunc = async ({ inResponse }) => {
+import fetchAsPost from "./FetchAsPost/start.js";
+
+let StartFunc = async ({ inResponse, inPk }) => {
     let jVarLocalResponse = await inResponse;
 
     if (jVarLocalResponse.status === 200) {
-        let jVarLocalDataAsJson = await jVarLocalResponse.text();
+        const fromPost = await fetchAsPost({ inPk: inPk })
+        console.log("a : ", fromPost, inPk);
 
-        alert(jVarLocalDataAsJson);
+        alert(fromPost);
     };
-
 };
 
 export { StartFunc };

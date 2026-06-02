@@ -1,11 +1,8 @@
 import { formSearchParamsFunc } from "./formSearchParamsFunc.js";
 import getUrlJson from './getUrl.json' with {type: 'json'};
 
-let StartFunc = async () => {
-    // const pkToPost = formSearchParamsFunc({ inKeyName: "pk" });
-    const pkToPost = document.getElementById("htmlId").innerHTML;
-
-    let jVarLocalGetEndPoint = `${getUrlJson.GetEndPoint}/${pkToPost}`;
+let StartFunc = async ({ inPk }) => {
+    let jVarLocalGetEndPoint = `${getUrlJson.GetEndPoint}/${inPk}`;
 
     let response = await fetch(jVarLocalGetEndPoint);
 

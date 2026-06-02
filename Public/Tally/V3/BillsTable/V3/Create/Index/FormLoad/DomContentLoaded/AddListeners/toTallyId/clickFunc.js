@@ -3,7 +3,9 @@ import { startFetchAsGet } from "./FetchAsGet/start.js";
 const clickFuncToRun = ({ inCurrentTarget }) => {
     applyActive({ inCurrentTarget });
 
-    startFetchAsGet();
+    const pkToPost = document.getElementById("htmlId").innerHTML;
+
+    startFetchAsGet({ inPk: pkToPost });
 };
 
 const applyActive = ({ inCurrentTarget }) => {
