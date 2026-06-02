@@ -20,8 +20,17 @@ const createFooterCell = ({ key, onChangeFunc, showDataList, inColumnsConfig,
         key, onChangeFunc: localChangeFunc, inOnKeyDown, inOnKeyDownType,
         showDataList, inColumnsConfig, inDefaultValue, inOnChangeType
     });
+
+    const div = document.createElement("div");
+    div.className = "calc-message";
+
+    //     td.className = inTdClass;
+    // <div class="calc-message">
+    //     Rate calculated : 1500
+    // </div>
     // debugger;
     td.appendChild(input);
+    td.appendChild(div);
 
     return td;
 };

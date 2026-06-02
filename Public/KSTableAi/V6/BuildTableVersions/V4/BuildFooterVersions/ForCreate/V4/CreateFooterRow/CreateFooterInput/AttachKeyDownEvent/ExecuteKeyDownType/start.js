@@ -5,8 +5,7 @@ const executeKeyDownType = ({
     currentInput,
     inOnKeyDownType
 }) => {
-    console.log("inOnKeyDownType : ", inOnKeyDownType);
-
+    // console.log("inOnKeyDownType : ", inOnKeyDownType);
 
     switch (inOnKeyDownType) {
         case "Amount":
@@ -19,7 +18,7 @@ const executeKeyDownType = ({
 
         default:
             break;
-    }
+    };
 };
 
 export default executeKeyDownType;

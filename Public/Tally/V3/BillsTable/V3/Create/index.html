@@ -12,6 +12,20 @@
     <!-- Heroicons (SVG inline, no extra CDN needed) -->
 
     <style>
+        tfoot tr {
+            background-color: #fff8dc;
+        }
+
+        tfoot tr:has(input:focus) {
+            background-color: #ffe082;
+        }
+
+        input:focus {
+            outline: none;
+            border: 2px solid #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+        }
+
         mark {
             background-color: yellow;
             color: black;

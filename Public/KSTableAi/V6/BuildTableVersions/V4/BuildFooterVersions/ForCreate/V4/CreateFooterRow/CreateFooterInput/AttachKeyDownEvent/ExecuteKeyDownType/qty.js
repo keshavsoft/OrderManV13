@@ -1,7 +1,9 @@
+import showCalcMessage from "./showCalcMessage.js";
+
 const rate = ({
     currentInput
 }) => {
-    console.log("currentInput : ", currentInput);
+    // console.log("currentInput : ", currentInput);
 
     const closestTr =
         currentInput.closest("tr");
@@ -14,8 +16,14 @@ const rate = ({
         closestTr.querySelector('[name="Rate"]').value
     );
 
-    closestTr.querySelector('[name="Amount"]').value =
-        rate * qty;
+    const Amount = rate * qty;
+
+    closestTr.querySelector('[name="Amount"]').value = Amount;
+
+    showCalcMessage({
+        input: currentInput,
+        message: `Amount change : ${Amount}`
+    });
 };
 
 export default rate;
