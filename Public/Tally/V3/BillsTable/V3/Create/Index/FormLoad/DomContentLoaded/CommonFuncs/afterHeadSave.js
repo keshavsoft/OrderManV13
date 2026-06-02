@@ -1,4 +1,4 @@
-import { initCreate, initShowTable, initTableWithFooter } from "/KSTableAi/V5/entry.js";
+import { initCreate, initShowTable, initTableWithFooter } from "/KSTableAi/V6/entry.js";
 import onSuccessFunc from "./onSuccess.js";
 
 const afterHeadSave = async (inPk) => {

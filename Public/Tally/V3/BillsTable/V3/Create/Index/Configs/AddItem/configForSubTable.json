@@ -48,7 +48,7 @@
             "isRequired": true,
             "tableFooterDataListShow": true,
             "dataListSource": "ItemName.StockItemName",
-            "allowOnChange": false,
+            "allowOnChange": true,
             "cellConfig": {
                 "width": "250px"
             }

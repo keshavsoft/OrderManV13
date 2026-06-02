@@ -3,9 +3,7 @@ import { buildBody } from "../BuildTableVersions/V4/BuildBodyVersions/V5/start.j
 import createForm from "../BuildSearchForm/V1/createForm.js";
 import buildDataLists from "../BuildDataLists/V2/addToDom.js";
 
-// import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForSummary/V8/CreateFooterRow/V3/start.js";
-
-import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForCreate/V2/start.js";
+import buildFooter from "../BuildTableVersions/V4/BuildFooterVersions/ForCreate/V3/start.js";
 
 import SearchFuncs from "../TableFirstRow/V3/SearchFuncs/V4/index.js";
 import setFocus from "../UI/SetFocus/V3/index.js";
