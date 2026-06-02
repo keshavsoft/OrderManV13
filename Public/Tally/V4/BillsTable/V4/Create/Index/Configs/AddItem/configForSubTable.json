@@ -1,0 +1,133 @@
+{
+    "containerId": "kSSubTableContainer",
+    "tableName": "Sub",
+    "mode": "create",
+    "layout": {
+        "verticalPosition": "top",
+        "type": "table"
+    },
+    "endPoints": {
+        "create": "/Api/V4/ItemsTable/Insert",
+        "update": "",
+        "delete": "/Api/V4/ItemsTable/Delete",
+        "read": "/Api/V4/ItemsTable/FilterColumns?ParentPk=",
+        "find": "",
+        "filter": "",
+        "dataLists": {},
+        "dataListEndpoints": {
+            "ItemName": "/Api/V4/StockItems/ShowAll"
+        }
+    },
+    "options": {
+        "firstRow": {
+            "showSearch": false
+        },
+        "enabledSections": [
+            "vertical",
+            "table",
+            "footer"
+        ],
+        "table": {
+            "showFooterRows": true,
+            "showFooter": true,
+            "showDataList": true,
+            "showSerial": true,
+            "showSave": true,
+            "showActions": true,
+            "serialWidth": "25px",
+            "optionsWidth": "100px"
+        },
+        "dataList": {
+            "show": true
+        }
+    },
+    "columnsConfig": [
+        {
+            "columnName": "ItemName",
+            "title": "Item Name",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "dataListSource": "ItemName.StockItemName",
+            "allowOnChange": true,
+            "cellConfig": {
+                "width": "250px"
+            },
+            "onChangeType": "onDataListChange",
+            "onKeyDown": true
+        },
+        {
+            "columnName": "RateInc",
+            "title": "Rate Inc",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
+            },
+            "onKeyDown": false
+        },
+        {
+            "columnName": "Rate",
+            "title": "Rate",
+            "isRequired": true,
+            "tableFooterDataListShow": true,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
+            },
+            "onKeyDown": true
+        },
+        {
+            "columnName": "Qty",
+            "title": "Qty",
+            "isRequired": false,
+            "cellConfig": {
+                "width": "75px",
+                "rightAlign": true
+            },
+            "onKeyDown": true,
+            "onKeyDownType": "Qty"
+        },
+        {
+            "columnName": "Amount",
+            "title": "Amount",
+            "isRequired": false,
+            "cellConfig": {
+                "width": "100px",
+                "rightAlign": true
+            },
+            "onKeyDown": true,
+            "onKeyDownType": "Amount"
+        },
+        {
+            "columnName": "TaxPer",
+            "isRequired": false,
+            "dataListColumn": "TaxPer",
+            "isVisible": false,
+            "defaultValue": "18"
+        },
+        {
+            "columnName": "Uom",
+            "isRequired": false,
+            "dataListColumn": "StockBaseUnits",
+            "isVisible": false,
+            "defaultValue": "Nos"
+        },
+        {
+            "columnName": "ParentPk",
+            "isRequired": false,
+            "defaultValue": "pkFromParams",
+            "isVisible": false
+        },
+        {
+            "columnName": "pk",
+            "isPrimaryKey": true,
+            "isVisible": false
+        }
+    ],
+    "uiClasses": {
+        "table": {
+            "tableClass": "table bg-white table-fixed w-full"
+        }
+    }
+}
